@@ -1,11 +1,14 @@
-01 name: “GHAIA greeter.yml workflow”
-02 on: push
-04 jobs:
-05 job-1:
-06 name: Greet our reader
-07 runs-on: ubuntu-latest
-08 steps:
-09 - name: Print a greeting in stdout
-10 uses: actions/hello-world-javascript-action@v1
-11 with:
-12 who-to-greet: ‘Manning book reader’
+name: “GHAIA greeter.yml workflow”
+
+on: push
+
+jobs:
+  job-1:
+    name: Greet our reader
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show a greeting using stdout
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: "Manning book reader"
